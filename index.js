@@ -17,12 +17,19 @@ function drawCookie(){
 function drawGranny(){
 	granny_display.innerText='👵'.repeat(granny)
 }
+
+function draw(){
+	drawScore()
+	drawCookie()
+	drawGranny()
+}
+
 function buyGranny(){
 	// debugger;
 	if(score>=price['granny']){
 		score-=price['granny'];
 		granny++
-		drawGranny();
+		draw();
 	}
 }
 
