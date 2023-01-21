@@ -3,12 +3,48 @@
 <title>Clicker!!!</title>
 </head>
 <body>
-	<button onclick="score++;score_display.innerText=score;cookie_display.innerText='🥠'.repeat(score)">Click here!</button>
+	<button onclick="
+			score++;
+			drawScore()
+			drawCookie()
+			">Click here!</button>
+	<button onclick="
+			if(score>=price[granny]){
+					 score-=price[granny];"
+			granny++
+			drawGranny();
+			}
 	<div id="score_display"></div>
 	<div id="cookie_display"></div>
-<script defer>
-	let score = 0;
+	<script defer>
+		try{
+	const storage=localStorage
+	}
+	catch(e){
+	const storage = {}
+	}
+
+	function drawScore(){
+			score_display.innerText=score;
+	}
+
+	function drawCookie(){
+			cookie_display.innerText='🥠'.repeat(score)
+	}
+
+	function drawGranny(){
+			granny_display.innerText='👵'.repeat(score)
+	}
+
+	price = {
+	granny : 10
+	}
+
+	let score = +(storage.score??0)
 	let score_display = document.getElementById('score_display')
+
 	let cookie_display = document.getElementById('cookie_display')
-</script>
+
+	let granny_display = document.getElementById('granny_display')
+	</script>
 </body>
