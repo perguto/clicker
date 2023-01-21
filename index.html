@@ -3,7 +3,12 @@
 <title>Clicker!!!</title>
 </head>
 <body>
-	<button onclick="score++;score_display.innerText=score">Click here!</button>
+	<button onclick="score++;score_display.innerText=score;cookie_display.innerText='🥠'.repeat(score)">Click here!</button>
 	<div id="score_display"></div>
-<script defer>let score = 0;let score_display = document.getElementById('score_display')</script>
+	<div id="cookie_display"></div>
+<script defer>
+	let score = 0;
+	let score_display = document.getElementById('score_display')
+	let cookie_display = document.getElementById('cookie_display')
+</script>
 </body>
