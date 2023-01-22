@@ -3,24 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title>Clicker!!!</title>
+	<link type="text/css" rel="stylesheet" href="./normalize.css">
   </head>
   <body>
-    <button
-      onclick="
-getCookie()				"
-    >
+	  <h1>Super Cookie clicker!</h1>
+    <button onclick="getCookie()">
       Click here!
     </button>
-    <button
-      onclick="
-	  buyGranny()
-				"
-    >
+    <button onclick="buyGranny()">
       Buy Granny!
     </button>
     <div id="score_display"></div>
     <div id="cookie_display"></div>
     <div id="granny_display"></div>
+	<div id="time_passed"> </div>
+	<div id="forecast"></div>
     <script defer src="index.js"></script>
   </body>
 </html>
